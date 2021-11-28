@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+name: 🚀 Deploy with Fito
+jobs:
+  deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@master
+
+      - name: GO!
+        uses: dimaslz/dimaslz-Action@wip
+        with:
+          server_ip: ${{ secrets.CONNECTION_HOST }}
+          user: ${{ secrets.CONNECTION_USER }}
+          ssh_private_key: ${{ secrets.CONNECTION_PRIVATE_KEY }}
+          app_host: dimaslz.dev
+          app_name: test-vue-cs
+          static: true
+          run_command: echo "hola" && yarn start
+          # build_command: { { BUILD_COMMAND } }
+          env: |
+            
