@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: GO!
-        uses: dimaslz/dimaslz-Action@wip
+        uses: dimaslz/dimaslz-Action@wip2
         with:
           server_ip: ${{ secrets.CONNECTION_HOST }}
           user: ${{ secrets.CONNECTION_USER }}
@@ -26,4 +26,4 @@ jobs:
           run_command: echo "hola" && yarn start
           # build_command: { { BUILD_COMMAND } }
           env: |
-            
+
