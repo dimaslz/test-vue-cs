@@ -57,6 +57,9 @@
       <li>
         <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a>
       </li>
+      <li>
+        test
+      </li>
     </ul>
   </div>
 </template>
